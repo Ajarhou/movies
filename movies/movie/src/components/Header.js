@@ -1,36 +1,28 @@
-import React from 'react';
-import { Link, NavLink} from "react-router-dom";
 
-const Header = () => {
+import React from 'react'
+import { Link } from 'react-router-dom'
+function Header() {
   return (
     <header>
-
-<div className="header">
-        <div className='container'>
-            <div className='logo'>
-                <Link to="/">
-                    Movies
-                </Link>
-
-            </div>
-            <ul className='nav-links'>
-                <li>
-                  <NavLink to="/">Watch list</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/watched">Watched</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/add" className='btn'>Add</NavLink>
-                </li>
-
-            </ul>
-             
+      <div className="container">
+        <div className="inner-content">
+          <div className="brand">
+            <Link to="/">Movies</Link>
+          </div>
+          <ul className="nav-links">
+              <li>
+                <Link to="/">Watch List</Link>
+              </li>
+              <li>
+                <Link to="/watched">Watched</Link>
+              </li>
+              <li>
+                <Link to="/add" className='btn'>Add</Link>
+              </li>
+          </ul>
         </div>
-    </div>
-
+      </div>
     </header>
-    
   )
 }
 
